@@ -63,12 +63,15 @@ def iniciar_agente():
             print(obtener_saludo(Nombre_bot))
         elif comando == "ayuda":
             print(mostrar_ayuda())
+        elif comando == "recordar":
+            print(procesar_comando_recordar(argumento))
         elif comando == "salir":
             print("Hasta luego")
             ejecutando = False
+        elif comando == "uptime":
+            print(calcular_uptime(hora_inicio))
         else:
             print("Comando no reconocido")
-
 
 def main():
     iniciar_agente()
